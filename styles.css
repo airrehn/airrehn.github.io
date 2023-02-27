@@ -7,6 +7,46 @@
     font-family: 'Roboto', sans-serif;
 }
 
+section {
+    background-color: rgb(245, 245, 245);
+}
+
+.title {
+    font-size: 120px;
+    margin-bottom: 12px;
+    text-align: left;
+    line-height: 1;
+}
+
+.orange {
+    color: rgb(109, 198, 224);
+}
+
+
+p{
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.click {
+    transition: all 300ms ease;
+}
+.click:hover {
+    transform: scale(1.1);
+}
+
+.click:active {
+    transform: scale(0.8);
+}
+
+button {
+cursor: pointer;
+}
+
 /* LANDING PAGE */
 
 #landing-page {
@@ -14,8 +54,7 @@
 }
 
 
-
-/* NAV BAR !*/
+/* NAV BAR */
 
 nav {
     display: flex;
@@ -25,12 +64,13 @@ nav {
     max-width: 1200px;
     margin: 0 auto;
     height: 100px;
+    padding: 0 20px;
 
 }
 
 #personal-logo {
-    width: 50px;
-    height: 50px;
+    width: 75px;
+    height: 75px;
 }
 
 
@@ -53,4 +93,106 @@ nav {
 
 .fa-adjust {
     font-size: 20px;
+}
+
+
+
+/* HEADER */
+
+.header {
+    /* position header box in center of page */
+    /* the "position: absolute" allows us to reposition like this, 
+    notice the gap between the nav and our header section */
+    position: absolute;
+    top: 50%;
+    left: 50%; /* here u are putting making the top edge of the element sit at 50% of screen and left edge of 
+    the element at the 50% of screen, this does not actually center the element*/
+    transform: translate(-50%,-50%); /* to actually center it, u have to call "transform: translate" to shift the element backwards by 50% of itself, 
+    up by 50% of the actual element  */
+
+    width: 100%;
+    max-width: 1000px;
+
+    padding: 0 30px;
+}
+
+.header__para {
+    font-size: 24px;
+    line-height: 2;
+    max-width: 500px;
+}
+
+.social__list {
+    margin-top: 16px;
+    display: flex;
+}
+
+.social__link {
+    background-color: rgb(109, 198, 224);
+    border-radius: 50%;
+    color: white;
+    padding: 6px;
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+    margin-right: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.mail__button {
+    width: 70px;
+    height: 70px;
+    font-size: 32px;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    background-color: #242424;
+
+    position: absolute;
+    bottom: 32px;
+    right: 40px;
+    
+}
+
+
+.scroll {
+    position: absolute;
+    bottom: 20px;
+    left: 50%; /* here u are putting the left edge of the element at the 50% mark*/
+    transform: translateX(-50%); /* here u are shifting the left edge by 50% of the element, 
+    to actually center the element in the center of the screen */
+}
+
+.scroll__icon {
+    width: 20px;
+    height: 30px;
+    border: 2px solid #242424;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* :after creates a pseudo-element that is the last child of the selected element */
+.scroll__icon:after {
+    content: "";
+    background-color: #242424;
+    width: 4px;
+    height: 6px;
+    border-radius: 3px;
+    animation: scroll 1000ms infinite alternate-reverse;    
+}
+
+@keyframes scroll {
+
+    0% {
+        transform: translateY(3px);
+
+    }
+    100% {
+        transform: translateY(-3px);
+    }
 }

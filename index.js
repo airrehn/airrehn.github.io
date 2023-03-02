@@ -1,10 +1,6 @@
-// template_z6ksw5x
-// service_vsi9dki
-// 1JAOCUiPRg6rj1jqf
 let isModalOpen = false;
 let contrastToggle = false;
 const scaleFactor = 1/20;
-
 
 function contact(event) {
     event.preventDefault()

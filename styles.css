@@ -387,7 +387,7 @@ nav {
 }
 
 .modal__language--wrapper {
-  width: calc(100% / 3);
+  width: calc(100% / 4);
   display: flex;
   justify-content: center;
 

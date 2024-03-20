@@ -372,6 +372,7 @@ nav {
 
 .modal__title {
   font-size: 26px;
+  /* margin: 12px 0 24px 0; */
 }
 
 .modal__subtitle {
